@@ -22,7 +22,7 @@ def main():
 
             writer.add_page(page)
 
-        saved_file = f"{os.path.dirname(file_path)}{os.path.basename(file_path)}"   
+        saved_file = f"{os.path.basename(file_path)}"
 
         with open(saved_file, "wb") as new_file:
             writer.write(new_file)
