@@ -34,5 +34,8 @@ def main():
     except FileNotFoundError:
         print('File not found.')
 
+    except PermissionError:
+        print('Cannot modify file.')    
+
 if __name__ == "__main__":
     main()      
