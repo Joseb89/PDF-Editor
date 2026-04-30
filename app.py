@@ -7,6 +7,10 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
+@app.route("/", methods=["GET"])
+def get_home_page():
+    return render_template("index.html")
+
 @app.route("/rotate_pdf", methods=["GET", "POST"])
 def rotate_pdf():
     if request.method == "POST":
